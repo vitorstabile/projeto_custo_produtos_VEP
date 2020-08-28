@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.entities.MP;
+import model.entities.Recurso;
 
 
 public class Main extends Application {
@@ -24,18 +24,15 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		/*launch(args);*/
 		
-		MP mp1 = new MP(1, "800009", "AZEITE", 6.12);
+		Recurso recurso = new Recurso(1, "GÁS", 20.0);
 		
-		MP mp2 = new MP(28, "800027", "CEBOLA IN NATURA", 5.1);
+		System.out.println(recurso);
 		
-		System.out.println(mp1);
-		System.out.println(mp2);
+		System.out.println(recurso.getIdRecurso());
 		
-		System.out.println(mp1.getCodigoMP());
+		recurso.setCustoRecurso(40.0);
 		
-		mp2.setCustoMP(10.2);
-		
-		System.out.println(mp2.getCustoMP());
+		System.out.println(recurso.getCustoRecurso());
 		
 	}
 }
