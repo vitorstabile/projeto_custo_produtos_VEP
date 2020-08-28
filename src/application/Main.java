@@ -1,12 +1,10 @@
 package application;
 	
-import java.sql.Connection;
-
-import db.DB;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.entities.MP;
 
 
 public class Main extends Application {
@@ -26,13 +24,18 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		/*launch(args);*/
 		
-		Connection conn = DB.getConnection();
-				
-		System.out.println("Conexão com o Banco Realizada");
+		MP mp1 = new MP(1, "800009", "AZEITE", 6.12);
 		
-		DB.closeConnection();
+		MP mp2 = new MP(28, "800027", "CEBOLA IN NATURA", 5.1);
 		
-		System.out.println("Conexão com o Banco Fechada");
+		System.out.println(mp1);
+		System.out.println(mp2);
+		
+		System.out.println(mp1.getCodigoMP());
+		
+		mp2.setCustoMP(10.2);
+		
+		System.out.println(mp2.getCustoMP());
 		
 	}
 }
