@@ -66,6 +66,11 @@ public class Ingrediente implements Serializable {
 		this.updateqtIngredienteLiquido();
 		
 		this.updateCustoIngrediente();
+		
+		this.getReceita().updateRendBrutoReceita();
+		this.getReceita().updatePerdaReceita();
+		this.getReceita().updateCustoReceita();
+		this.getReceita().updatePorcenIngredientes();
 	}
 
 	public Double getPerdaIngrediente() {
@@ -91,7 +96,13 @@ public class Ingrediente implements Serializable {
 
 	public void setCustoMP(Double custoMP) {
 		this.custoMP = custoMP;
+		
 		this.updateCustoIngrediente();
+		
+		this.getReceita().updateRendBrutoReceita();
+		this.getReceita().updatePerdaReceita();
+		this.getReceita().updateCustoReceita();
+		this.getReceita().updatePorcenIngredientes();
 	}
 
 	public Double getCustoIngrediente() {
@@ -152,7 +163,5 @@ public class Ingrediente implements Serializable {
 				+ ", qtIngredienteLiquido=" + qtIngredienteLiquido + ", custoMP=" + custoMP + ", custoIngrediente="
 				+ custoIngrediente + ", porcenIngrediente=" + porcenIngrediente + "]";
 	}
-	
-	
 
 }

@@ -38,21 +38,25 @@ public class Main extends Application {
 		
 		Ingrediente ingrediente2 = new Ingrediente(2, mp2, receita, 20.0, 5.0);
 		
-		System.out.println(ingrediente1);
+		receita.addIngrediente(ingrediente1);
 		
-		System.out.println(ingrediente2);
+		System.out.println(receita);
 		
-		ingrediente1.setPerdaIngrediente(0.0);
+		receita.addIngrediente(ingrediente2);
 		
-		ingrediente2.setQtIngredienteBruto(100.0);
+		System.out.println(receita);
 		
-		System.out.println(ingrediente1);
+		ingrediente2.setQtIngredienteBruto(40.0);
 		
-		System.out.println(ingrediente2);
+		System.out.println(receita);
 		
-		ingrediente2.setCustoMP(40.0);
-
-		System.out.println(ingrediente2);
+		receita.setRendLiqReceita(40.0);
+		
+		System.out.println(receita);
+		
+		receita.removeIngrediente(ingrediente2);
+		
+		System.out.println(receita);
 		
 	}
 }
