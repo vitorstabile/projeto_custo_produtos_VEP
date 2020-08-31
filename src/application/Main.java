@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import model.entities.Recurso;
+import model.entities.Receita;
 
 
 public class Main extends Application {
@@ -24,15 +24,14 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		/*launch(args);*/
 		
-		Recurso recurso = new Recurso(1, "GÁS", 20.0);
+		Receita receita = new Receita(1, "Receita Teste", 20.0);
 		
-		System.out.println(recurso);
+		System.out.println(receita);
 		
-		System.out.println(recurso.getIdRecurso());
+		System.out.println(receita.getDataReceita());
 		
-		recurso.setCustoRecurso(40.0);
-		
-		System.out.println(recurso.getCustoRecurso());
-		
+		receita.setRendLiqReceita(40.0);
+
+		System.out.println(receita.getRendLiqReceita());
 	}
 }
