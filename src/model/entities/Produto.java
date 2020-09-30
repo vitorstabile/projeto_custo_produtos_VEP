@@ -1,9 +1,11 @@
 package model.entities;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Produto {
+public class Produto implements Serializable{
+	private static final long serialVersionUID = 1L;
 
 	private Integer idProduto;
 	private String descricaoProduto;

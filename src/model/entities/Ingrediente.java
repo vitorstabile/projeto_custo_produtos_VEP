@@ -10,10 +10,10 @@ public class Ingrediente implements Serializable {
 	private IngredientePK id_MP_Receita = new IngredientePK();
 
 	private Integer id_MP_Receita_PK;
+	private Double custoMP;
 	private Double qtIngredienteBruto;
 	private Double perdaIngrediente;
 	private Double qtIngredienteLiquido;
-	private Double custoMP;
 	private Double custoIngrediente;
 	private Double porcenIngrediente;
 
@@ -24,10 +24,10 @@ public class Ingrediente implements Serializable {
 		this.id_MP_Receita_PK = id_MP_Receita_PK;
 		id_MP_Receita.setMp(mp);
 		id_MP_Receita.setReceita(receita);
+		this.custoMP = mp.getCustoMP();
 		this.qtIngredienteBruto = qtIngredienteBruto;
 		this.perdaIngrediente = perdaIngrediente;
 		this.qtIngredienteLiquido = (qtIngredienteBruto - qtIngredienteBruto*(perdaIngrediente/100));
-		this.custoMP = mp.getCustoMP();
 		this.custoIngrediente = mp.getCustoMP() * qtIngredienteBruto;
 		this.porcenIngrediente = null;
 	}
@@ -54,6 +54,21 @@ public class Ingrediente implements Serializable {
 
 	public void setId_MP_Receita_PK(Integer id_MP_Receita_PK) {
 		this.id_MP_Receita_PK = id_MP_Receita_PK;
+	}
+	
+	public Double getCustoMP() {
+		return custoMP;
+	}
+
+	public void setCustoMP(Double custoMP) {
+		this.custoMP = custoMP;
+		
+		this.updateCustoIngrediente();
+		
+		this.getReceita().updateRendBrutoReceita();
+		this.getReceita().updatePerdaReceita();
+		this.getReceita().updateCustoReceita();
+		this.getReceita().updatePorcenIngredientes();
 	}
 
 	public Double getQtIngredienteBruto() {
@@ -88,21 +103,6 @@ public class Ingrediente implements Serializable {
 
 	public void setQtIngredienteLiquido(Double qtIngredienteLiquido) {
 		this.qtIngredienteLiquido = qtIngredienteLiquido;
-	}
-
-	public Double getCustoMP() {
-		return custoMP;
-	}
-
-	public void setCustoMP(Double custoMP) {
-		this.custoMP = custoMP;
-		
-		this.updateCustoIngrediente();
-		
-		this.getReceita().updateRendBrutoReceita();
-		this.getReceita().updatePerdaReceita();
-		this.getReceita().updateCustoReceita();
-		this.getReceita().updatePorcenIngredientes();
 	}
 
 	public Double getCustoIngrediente() {
