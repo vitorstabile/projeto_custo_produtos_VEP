@@ -13,6 +13,8 @@ public class Embalagem implements Serializable {
 	private Double custoMP;
 	private Double qtEmbalagem;
 	private Double custoEmbalagem;
+
+	
 	
 	public Embalagem() {
 	}
@@ -25,6 +27,8 @@ public class Embalagem implements Serializable {
 		this.qtEmbalagem = qtEmbalagem;
 		this.custoEmbalagem = mp.getCustoMP() * qtEmbalagem;
 	}
+
+	
 	
 	public MP getMP() {
 		return id_Produto_MP.getMp();
@@ -83,6 +87,8 @@ public class Embalagem implements Serializable {
 		this.custoEmbalagem = this.getQtEmbalagem()*this.custoMP;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -108,14 +114,12 @@ public class Embalagem implements Serializable {
 		return true;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "Embalagem [id_Produto_MP_PK=" + id_Produto_MP_PK + ", id_MP=" + this.getMP().getIdMP() + ", id_Produto=" + this.getProduto().getIdProduto()
 				+ " custoMP=" + custoMP + ", qtEmbalagem="
 				+ qtEmbalagem + ", custoEmbalagem=" + custoEmbalagem + "]";
 	}
-	
-	
-	
-
 }

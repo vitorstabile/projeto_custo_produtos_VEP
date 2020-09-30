@@ -10,6 +10,7 @@ public class Recurso implements Serializable{
 	private Double custoRecurso;
 	
 	
+	
 	public Recurso() {
 	}
 
@@ -19,6 +20,8 @@ public class Recurso implements Serializable{
 		this.custoRecurso = custoRecurso;
 	}
 
+	
+	
 	public Integer getIdRecurso() {
 		return idRecurso;
 	}
@@ -43,6 +46,8 @@ public class Recurso implements Serializable{
 		this.custoRecurso = custoRecurso;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,10 +73,11 @@ public class Recurso implements Serializable{
 		return true;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "Recurso [idRecurso=" + idRecurso + ", descricaoRecurso=" + descricaoRecurso + ", custoRecurso="
 				+ custoRecurso + "]";
 	}
-	
 }

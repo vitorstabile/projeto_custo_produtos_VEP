@@ -11,18 +11,25 @@ public class UtilidadePK implements Serializable {
 	private Produto produto;
 	private Recurso recurso;
 	
+	
+	
 	public Produto getProduto() {
 		return produto;
 	}
+	
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
+	
 	public Recurso getRecurso() {
 		return recurso;
 	}
+	
 	public void setRecurso(Recurso recurso) {
 		this.recurso = recurso;
 	}
+	
+	
 	
 	@Override
 	public int hashCode() {

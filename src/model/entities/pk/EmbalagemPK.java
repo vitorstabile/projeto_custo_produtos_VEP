@@ -11,6 +11,8 @@ public class EmbalagemPK implements Serializable {
 	private MP mp;
 	private Produto produto;
 	
+	
+	
 	public MP getMp() {
 		return mp;
 	}
@@ -27,6 +29,8 @@ public class EmbalagemPK implements Serializable {
 		this.produto = produto;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -57,7 +61,4 @@ public class EmbalagemPK implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
 }

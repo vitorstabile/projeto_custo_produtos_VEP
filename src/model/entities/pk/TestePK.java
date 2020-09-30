@@ -11,18 +11,25 @@ public class TestePK implements Serializable {
 	private Receita receita;
 	private Produto produto;
 	
+	
+	
 	public Receita getReceita() {
 		return receita;
 	}
+	
 	public void setReceita(Receita receita) {
 		this.receita = receita;
 	}
+	
 	public Produto getProduto() {
 		return produto;
 	}
+	
 	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
+	
+	
 	
 	@Override
 	public int hashCode() {
@@ -32,6 +39,7 @@ public class TestePK implements Serializable {
 		result = prime * result + ((receita == null) ? 0 : receita.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -53,7 +61,4 @@ public class TestePK implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-
 }

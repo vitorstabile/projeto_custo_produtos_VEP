@@ -12,6 +12,7 @@ public class IngredientePK implements Serializable {
 	private Receita receita;
 	
 	
+	
 	public MP getMp() {
 		return mp;
 	}
@@ -28,6 +29,8 @@ public class IngredientePK implements Serializable {
 		this.receita = receita;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -58,5 +61,4 @@ public class IngredientePK implements Serializable {
 			return false;
 		return true;
 	}
-	
 }

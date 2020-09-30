@@ -11,6 +11,8 @@ public class Utilidade implements Serializable {
 	
 	private Integer id_Produto_Recurso_PK;
 
+	
+	
 	public Utilidade() {
 	}
 
@@ -20,6 +22,8 @@ public class Utilidade implements Serializable {
 		id_Produto_Recurso.setRecurso(recurso);
 	}
 
+	
+	
 	public Produto getProduto() {
 		return id_Produto_Recurso.getProduto();
 	}
@@ -44,6 +48,8 @@ public class Utilidade implements Serializable {
 		this.id_Produto_Recurso_PK = id_Produto_Recurso_PK;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -69,13 +75,12 @@ public class Utilidade implements Serializable {
 		return true;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "Utilidade [id_Produto_Recurso_PK=" + id_Produto_Recurso_PK + 
 				", id_Produto=" + this.getProduto().getIdProduto() + 
 				", id_Recurso=" + this.getRecurso().getIdRecurso() + "]";
-	}
-	
-	
-	
+	}	
 }

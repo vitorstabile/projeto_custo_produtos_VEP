@@ -19,9 +19,10 @@ public class Receita implements Serializable {
 	
 	private List<Ingrediente> ingredientes = new ArrayList<>();
 	
+	
+	
 	public Receita() {
 	}
-
 
 	public Receita(Integer idReceita, String descricaoReceita, Double rendLiqReceita) {
 		this.idReceita = idReceita;
@@ -33,36 +34,32 @@ public class Receita implements Serializable {
 		this.dataReceita = new Date();
 	}
 	
+	
+	
 	public static String formatDate(Date date) {
 		SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		return sdf.format(date);
 	}
 
-
 	public Integer getIdReceita() {
 		return idReceita;
 	}
-
 
 	public void setIdReceita(Integer idReceita) {
 		this.idReceita = idReceita;
 	}
 
-
 	public String getDescricaoReceita() {
 		return descricaoReceita;
 	}
-
 
 	public void setDescricaoReceita(String descricaoReceita) {
 		this.descricaoReceita = descricaoReceita;
 	}
 
-
 	public Double getRendLiqReceita() {
 		return rendLiqReceita;
 	}
-
 
 	public void setRendLiqReceita(Double rendLiqReceita) {
 		this.rendLiqReceita = rendLiqReceita;
@@ -73,41 +70,33 @@ public class Receita implements Serializable {
 		updatePorcenIngredientes();
 	}
 
-
 	public Double getRendBrutoReceita() {
 		return rendBrutoReceita;
 	}
-
 
 	public void setRendBrutoReceita(Double rendBrutoReceita) {
 		this.rendBrutoReceita = rendBrutoReceita;
 	}
 
-
 	public Double getPerdaReceita() {
 		return perdaReceita;
 	}
-
 
 	public void setPerdaReceita(Double perdaReceita) {
 		this.perdaReceita = perdaReceita;
 	}
 
-
 	public Double getCustoReceita() {
 		return custoReceita;
 	}
-
 
 	public void setCustoReceita(Double custoReceita) {
 		this.custoReceita = custoReceita;
 	}
 
-
 	public Date getDataReceita() {
 		return dataReceita;
 	}
-
 
 	public void setDataReceita(Date dataReceita) {
 		this.dataReceita = dataReceita;
@@ -171,6 +160,7 @@ public class Receita implements Serializable {
 		}
 	}
 
+	
 
 	@Override
 	public int hashCode() {
@@ -179,7 +169,6 @@ public class Receita implements Serializable {
 		result = prime * result + ((idReceita == null) ? 0 : idReceita.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -197,6 +186,8 @@ public class Receita implements Serializable {
 			return false;
 		return true;
 	}
+	
+	
 	
 	@Override
 	public String toString() {

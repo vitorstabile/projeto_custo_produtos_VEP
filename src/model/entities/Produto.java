@@ -28,8 +28,9 @@ public class Produto implements Serializable{
 		this.rendBrutoProduto = null;
 		this.custoProduto = null;
 		this.dataProduto = new Date();
-		
 	}
+	
+	
 	
 	public static String formatDate(Date date) {
 		SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
@@ -91,6 +92,8 @@ public class Produto implements Serializable{
 	public void setDataProduto(Date dataProduto) {
 		this.dataProduto = dataProduto;
 	}
+	
+	
 
 	@Override
 	public int hashCode() {
@@ -116,6 +119,8 @@ public class Produto implements Serializable{
 			return false;
 		return true;
 	}
+	
+	
 
 	@Override
 	public String toString() {
@@ -123,5 +128,4 @@ public class Produto implements Serializable{
 				+ baseCalcProduto + ", gramaturaProduto=" + gramaturaProduto + ", rendBrutoProduto=" + rendBrutoProduto
 				+ ", custoProduto=" + custoProduto + ", dataProduto=" + formatDate(dataProduto) + "]";
 	}
-	
 }

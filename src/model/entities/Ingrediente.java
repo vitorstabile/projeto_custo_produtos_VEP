@@ -17,6 +17,8 @@ public class Ingrediente implements Serializable {
 	private Double custoIngrediente;
 	private Double porcenIngrediente;
 
+	
+	
 	public Ingrediente() {
 	}
 
@@ -31,6 +33,8 @@ public class Ingrediente implements Serializable {
 		this.custoIngrediente = mp.getCustoMP() * qtIngredienteBruto;
 		this.porcenIngrediente = null;
 	}
+	
+	
 
 	public MP getMP() {
 		return id_MP_Receita.getMp();
@@ -131,6 +135,8 @@ public class Ingrediente implements Serializable {
 		this.custoIngrediente = this.getQtIngredienteBruto()*this.custoMP;
 	}
 
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -156,6 +162,8 @@ public class Ingrediente implements Serializable {
 		return true;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "Ingrediente [id_MP_Receita_PK=" + id_MP_Receita_PK + ", id_MP=" + this.getMP().getIdMP() + ", id_Receita=" + this.getReceita().getIdReceita()
@@ -163,5 +171,4 @@ public class Ingrediente implements Serializable {
 				+ ", qtIngredienteLiquido=" + qtIngredienteLiquido + ", custoMP=" + custoMP + ", custoIngrediente="
 				+ custoIngrediente + ", porcenIngrediente=" + porcenIngrediente + "]";
 	}
-
 }

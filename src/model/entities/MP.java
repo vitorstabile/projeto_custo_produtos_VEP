@@ -11,9 +11,9 @@ public class MP implements Serializable {
 	private Double custoMP;
 	
 	
+	
 	public MP() {
 	}
-
 
 	public MP(Integer idMP, String codigoMP, String descricaoMP, Double custoMP) {
 		this.idMP = idMP;
@@ -22,47 +22,42 @@ public class MP implements Serializable {
 		this.custoMP = custoMP;
 	}
 
-
+	
+	
 	public Integer getIdMP() {
 		return idMP;
 	}
-
 
 	public void setIdMP(Integer idMP) {
 		this.idMP = idMP;
 	}
 
-
 	public String getCodigoMP() {
 		return codigoMP;
 	}
-
 
 	public void setCodigoMP(String codigoMP) {
 		this.codigoMP = codigoMP;
 	}
 
-
 	public String getDescricaoMP() {
 		return descricaoMP;
 	}
-
 
 	public void setDescricaoMP(String descricaoMP) {
 		this.descricaoMP = descricaoMP;
 	}
 
-
 	public Double getCustoMP() {
 		return custoMP;
 	}
-
 
 	public void setCustoMP(Double custoMP) {
 		this.custoMP = custoMP;
 	}
 
-
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -70,7 +65,6 @@ public class MP implements Serializable {
 		result = prime * result + ((idMP == null) ? 0 : idMP.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -89,15 +83,11 @@ public class MP implements Serializable {
 		return true;
 	}
 
-
+	
+	
 	@Override
 	public String toString() {
 		return "MP [idMP=" + idMP + ", codigoMP=" + codigoMP + ", descricaoMP=" + descricaoMP + ", custoMP=" + custoMP
 				+ "]";
 	}
-
-
-	
-	
-	
 }
