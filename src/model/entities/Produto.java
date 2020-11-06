@@ -2,7 +2,9 @@ package model.entities;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Produto implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -14,6 +16,12 @@ public class Produto implements Serializable{
 	private Double rendBrutoProduto;
 	private Double custoProduto;
 	private Date dataProduto;
+	
+	private List<Teste> testes = new ArrayList<>();
+	
+	private List<Embalagem> embalagens = new ArrayList<>();
+	
+	private List<Utilidade> utilidades = new ArrayList<>();
 	
 	
 	
@@ -91,6 +99,42 @@ public class Produto implements Serializable{
 
 	public void setDataProduto(Date dataProduto) {
 		this.dataProduto = dataProduto;
+	}
+	
+	public List<Teste> getTestes() {
+		return testes;
+	}
+
+	public void addTeste(Teste teste) {
+		this.testes.add(teste);
+	}
+
+	public void removeTeste(Teste teste) {
+		this.testes.remove(teste);
+	}
+	
+	public List<Embalagem> getEmbalagens() {
+		return embalagens;
+	}
+
+	public void addEmbalagem(Embalagem embalagem) {
+		this.embalagens.add(embalagem);
+	}
+
+	public void removeEmbalagem(Embalagem embalagem) {
+		this.embalagens.remove(embalagem);
+	}
+	
+	public List<Utilidade> getEUtilidades() {
+		return utilidades;
+	}
+
+	public void addUtilidade(Utilidade utilidade) {
+		this.utilidades.add(utilidade);
+	}
+
+	public void removeUtilidade(Utilidade utilidade) {
+		this.utilidades.remove(utilidade);
 	}
 	
 	
